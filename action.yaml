@@ -1,0 +1,19 @@
+name: "podcast generator"
+author: "sai manam"
+description: " a demo github actions using docker"
+
+runs: 
+  using: "dockerfile"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs: 
+  email:
+    description: The commiters email address
+    required: true
+    default: ${{github.actor}}@localhost
+  name:
+    description: the commiters name
+    required: true
+    default: ${{github.actor}}
